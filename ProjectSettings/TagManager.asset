@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Ground
+  - Credits
+  - Gem
+  - Spikes
+  - Enemy
+  - Omament
+  - Staircase
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Player
+  - Ground
+  - Item
+  - Spikes
+  - Enemy
+  - Omament
+  - Staircase
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Omament
+    uniqueID: 1620418709
+    locked: 0
+  - name: Spiles
+    uniqueID: 1158881089
+    locked: 0
+  - name: Ground
+    uniqueID: 3442583633
+    locked: 0
+  - name: Staircase
+    uniqueID: 1061842913
+    locked: 0
+  - name: Item
+    uniqueID: 4232563817
+    locked: 0
+  - name: Enemy
+    uniqueID: 2625576341
+    locked: 0
+  - name: Player
+    uniqueID: 3661005373
+    locked: 0
