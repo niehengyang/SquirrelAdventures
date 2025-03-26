@@ -4,13 +4,14 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - LevelBounds
+  - Music
+  - Background
+  - NoMask
   - Ground
-  - Credits
-  - Gem
-  - Spikes
-  - Enemy
   - Omament
   - Staircase
+  - Spikes
   layers:
   - Default
   - TransparentFX
@@ -18,54 +19,54 @@ TagManager:
   - 
   - Water
   - UI
+  - 
+  - 
+  - Platforms
   - Player
-  - Ground
-  - Item
-  - Spikes
-  - Enemy
-  - Omament
-  - Staircase
+  - Volumes
+  - OneWayPlatforms
+  - Projectiles
+  - Enemies
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Ladders
+  - PlayerProjectiles
+  - MovingObjects
+  - MovingPlatforms
+  - Foreground
+  - MovingOneWayPlatforms
+  - NoCollision
+  - Background
+  - Friendlies
+  - Invulnerable
+  - PlatformsPlayerOnly
+  - MidHeightOneWayPlatforms
+  - Pushables
+  - Stairs
   - 
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 2674791413
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Omament
-    uniqueID: 1620418709
+  - name: Between
+    uniqueID: 606350985
     locked: 0
-  - name: Spiles
-    uniqueID: 1158881089
-    locked: 0
-  - name: Ground
-    uniqueID: 3442583633
-    locked: 0
-  - name: Staircase
-    uniqueID: 1061842913
-    locked: 0
-  - name: Item
-    uniqueID: 4232563817
-    locked: 0
-  - name: Enemy
-    uniqueID: 2625576341
+  - name: Platforms
+    uniqueID: 600026165
     locked: 0
   - name: Player
-    uniqueID: 3661005373
+    uniqueID: 2666359821
+    locked: 0
+  - name: Foreground
+    uniqueID: 1795597123
+    locked: 0
+  - name: VisibleParticles
+    uniqueID: 940224915
+    locked: 0
+  - name: UI
+    uniqueID: 3241408355
     locked: 0

@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Home.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Study/Common/Scirpts/LevelSelection/LevelSelection.unity
+    guid: 6196707f2d9516a4e94d0a5c0b9f7a8e
+  - enabled: 1
+    path: Assets/Study/Common/Scirpts/PauseGame/Level1.unity
+    guid: 9ad4758f41270e54cafe104a0f5b7a22
+  - enabled: 1
+    path: Assets/Study/Common/Scirpts/PauseGame/LoadingScreen.unity
+    guid: 3eed325c0292a7045b59fe282313f6d0
+  - enabled: 1
+    path: Assets/Study/Common/Scirpts/SplashScreen/StartScreen.unity
+    guid: 4c59e75e11b345046a282bd6af19f898
   m_configObjects: {}

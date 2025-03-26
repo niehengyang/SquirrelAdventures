@@ -42,4 +42,19 @@ public class Player : FSM
     {
         base.StampEemy(enemy);
     }
+
+    public void IsOnLadder()
+    {
+        parameter.isOnLadder = true;
+        parameter.isClimbing = true;
+        parameter.playerRB.velocity = Vector2.zero;
+        TransitionState(StateType.Climb);
+    }
+
+    public void IsOutLadder()
+    {
+        parameter.isOnLadder = false;
+        parameter.isClimbing = false;
+        ExitState();
+    }
 }

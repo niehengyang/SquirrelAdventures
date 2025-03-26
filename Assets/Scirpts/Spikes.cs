@@ -31,7 +31,7 @@ public class Spikes : MonoBehaviour
     private void OnTriggerStay2D(Collider2D other)
     {
         //判断是不是玩家
-        if (other.CompareTag("Player") && other.GetType().ToString().Equals("UnityEngine.CapsuleCollider2D"))
+        if (other.CompareTag("Player"))
         {
             //是不是可以伤害
             if (isDamageDurationOf)
@@ -55,7 +55,7 @@ public class Spikes : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
         //reset
-        if (other.CompareTag("Player") && other.GetType().ToString().Equals("UnityEngine.CapsuleCollider2D"))
+        if (other.CompareTag("Player"))
         {
             isDamageDurationOf = true;
             durationOfInjuryer = 0f;

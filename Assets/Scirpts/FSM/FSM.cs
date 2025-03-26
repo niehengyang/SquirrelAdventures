@@ -27,7 +27,12 @@ public class PlayerParameter
     [Header("受伤状态")]
     public int numBlinks;
    [HideInInspector] public SpriteRenderer playerRenderer;
-    public float hurtCD = 1.0f; 
+    public float hurtCD = 1.0f;
+
+    [Header("爬梯配置")]
+    public float climbSpeed = 2f; //攀爬速度
+    [HideInInspector] public bool isOnLadder = false; //是否在梯子上
+    [HideInInspector] public bool isClimbing = false; //是否在爬梯子
 }
 
 public class FSM : MonoBehaviour
@@ -72,6 +77,11 @@ public class FSM : MonoBehaviour
 
         currentState = states[type];
         currentState.OnEnter();
+    }
+
+    public void ExitState()
+    {
+        currentState?.OnExit();
     }
 
     public void PlayAnimation(string animation)

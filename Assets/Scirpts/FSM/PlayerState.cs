@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 public class ApperingState : IState
@@ -130,7 +129,7 @@ public class RunningState : IState
 
     public void OnFixedUpdate()
     {
-      
+
     }
 
     private void Move()
@@ -158,8 +157,6 @@ public class RunningState : IState
             manager.TransitionState(StateType.DoubleJumping);
         }
     }
-
-   
 }
 
 public class JumpingState : IState
@@ -341,7 +338,8 @@ public class ClimbState : IState
 {
     public FSM manager;
     public PlayerParameter parameter;
-    private bool isLadder;
+    private float vertical; //¥π÷± ‰»Î
+    private float moveX;
     public ClimbState(FSM stateManager)
     {
         manager = stateManager;
@@ -361,11 +359,25 @@ public class ClimbState : IState
 
     public void OnUpdate()
     {
-
+        vertical = Input.GetAxis("Vertical");
+        moveX = Input.GetAxis("Horizontal");
+        CheckOnLadder();
+        Climbing();
+        Move();
+        Fall();
     }
     public void OnFixedUpdate()
     {
 
+    }
+
+    private void Climbing()
+    {
+        if (parameter.isClimbing)
+        {
+            parameter.playerRB.gravityScale = 0;
+            parameter.playerRB.velocity = new Vector2(parameter.playerRB.velocity.x, vertical * parameter.climbSpeed);
+        }
     }
 
     /// <summary>
@@ -373,7 +385,10 @@ public class ClimbState : IState
     /// </summary>
     private void CheckOnLadder()
     {
+        if (parameter.isOnLadder && Mathf.Abs(vertical) > Mathf.Epsilon) parameter.isClimbing = true;
+        else if (parameter.isOnLadder && Mathf.Abs(vertical) <= Mathf.Epsilon) parameter.isClimbing = false;
 
+        if(!parameter.isOnLadder) parameter.playerRB.gravityScale = 1f;
     }
 
     /// <summary>
@@ -384,6 +399,25 @@ public class ClimbState : IState
         var v = parameter.playerRB.velocity;
         v.x = 0;
         parameter.playerRB.velocity = v;
+    }
+
+    private void Move()
+    {
+        if (parameter.isOnLadder && Mathf.Abs(moveX) > Mathf.Epsilon)
+        {
+            //“∆∂Ø
+            parameter.playerRB.velocity = new Vector2(moveX * parameter.runSpeed, parameter.playerRB.velocity.y);
+        }
+
+        if (!parameter.isOnLadder && Mathf.Abs(moveX) > Mathf.Epsilon)
+        {
+            manager.TransitionState(StateType.Running);
+        }
+    }
+
+    private void Fall()
+    {
+        if (!parameter.isOnLadder && parameter.playerRB.velocity.y < -0.01f) manager.TransitionState(StateType.Falling);
     }
 }
 
