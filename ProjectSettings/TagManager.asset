@@ -12,6 +12,8 @@ TagManager:
   - Omament
   - Staircase
   - Spikes
+  - Gem
+  - Enemy
   layers:
   - Default
   - TransparentFX
