@@ -773,7 +773,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 7, y: 64.97}
-  m_SizeDelta: {x: 287.99, y: 55.94}
+  m_SizeDelta: {x: 300, y: 55.94}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1856009771
 MonoBehaviour:
@@ -798,7 +798,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 2230732570650464555, guid: 3c2f5ef19372700469561cf2a1a4fc91,
       type: 3}
-    m_FontSize: 36
+    m_FontSize: 24
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 2
@@ -809,7 +809,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Splash Screen
+  m_Text: "\u6CA1\u4EC0\u4E48\u597D\u7684\u56FE\u7247\uFF0C\u5C06\u5C31\u4E86"
 --- !u!222 &1856009772
 CanvasRenderer:
   m_ObjectHideFlags: 0

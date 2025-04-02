@@ -575,5 +575,13 @@ namespace MoreMountains.CorgiEngine
 			this.MMEventStopListening<CorgiEngineEvent> ();
 			this.MMEventStopListening<CorgiEnginePointsEvent> ();
 		}
-	}
+
+		/// <summary>
+		/// 退出游戏
+		/// </summary>
+		public virtual void ApplicationQuit()
+		{
+			Application.Quit();
+		}
+    }
 }

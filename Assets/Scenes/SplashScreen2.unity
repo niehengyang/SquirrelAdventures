@@ -339,8 +339,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: fe1c5cb3b5f7b3344864048c4c32b967, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: bc980504cfc84044b9f7d7ffeb4da1ca, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -460,7 +460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e59650a2e35c87441b9ee7c6da1833f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextLevel: StartScreen
+  NextLevel: Home
   AutoSkipDelay: 3
   SkipLoading: 1
   FadeInDuraion: 1
@@ -798,10 +798,10 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 2230732570650464555, guid: 3c2f5ef19372700469561cf2a1a4fc91,
       type: 3}
-    m_FontSize: 36
+    m_FontSize: 0
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 0
     m_MaxSize: 120
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -809,7 +809,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u6885\u5F00\u4E8C\u5EA6"
+  m_Text: "\u5E7F\u544A\u4F4D"
 --- !u!222 &1856009772
 CanvasRenderer:
   m_ObjectHideFlags: 0
